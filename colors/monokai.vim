@@ -118,7 +118,7 @@ let s:changebg    = { "gui": "#ffffff", "cterm": "3" }
 call s:h("Normal",        { "fg": s:white,      "bg": s:black })
 call s:h("ColorColumn",   {                     "bg": s:lightblack })
 call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
-call s:h("CursorLine",    {                     "bg": s:lightblack2 })
+call s:h("CursorLine",    {                     "bg": s:lightblack })
 call s:h("NonText",       { "fg": s:lightgrey,  "bg": s:black })
 call s:h("StatusLine",    { "fg": s:realblack,   "bg": s:realblack })
 call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:realblack })
@@ -143,10 +143,10 @@ call s:h("Title",         { "fg": s:yellow })
 call s:h("Directory",     { "fg": s:aqua })
 
 " diff
-call s:h("DiffAdd",       { "fg": s:addfg,      "bg": s:addbg })
-call s:h("DiffDelete",    { "fg": s:black,      "bg": s:delbg })
-call s:h("DiffChange",    { "fg": s:changefg,   "bg": s:changebg })
-call s:h("DiffText",      { "fg": s:black,      "bg": s:aqua })
+call s:h("DiffAdd",       { "fg": s:black,      "bg": s:green })
+call s:h("DiffDelete",    { "fg": s:black,      "bg": s:red })
+call s:h("DiffChange",    { "fg": s:black,      "bg": s:blue })
+call s:h("DiffText",      { "fg": s:black,      "bg": s:blue })
 
 " fold
 call s:h("Folded",        { "fg": s:warmgrey,   "bg": s:darkblack })
@@ -261,13 +261,18 @@ call s:h("htmlSpecialChar",     { "fg": s:purple })
 call s:h("htmlH1",              { "fg": s:red })
 
 " Markdown
+call s:h("markdownError",       { "fg": s:white, "bg": s:black, "format": "" })
 call s:h("markdownH1",          { "fg": s:blue })
 call s:h("markdownH2",          { "fg": s:green })
 call s:h("markdownH3",          { "fg": s:blue })
 call s:h("markdownH4",          { "fg": s:red })
 call s:h("markdownHeadingDelimiter", { "fg": s:grey })
 call s:h("markdownHeadingRule", { "fg": s:grey })
+call s:h("markdownLinkDelimiter", { "fg": s:white })
+call s:h("markdownLinkText",    { "fg": s:white,   "format": "underline" })
+call s:h("markdownLinkTextDelimiter", { "fg": s:grey })
 call s:h("markdownListMarker",  { "fg": s:grey })
+call s:h("markdownUrl",         { "fg": s:grey })
 
 " Xml
 call s:h("xmlTag",              { "fg": s:red })
@@ -376,7 +381,9 @@ call s:h("dosiniNumber",                { "fg": s:white })
 call s:h("slimClass",                   { "fg": s:yellow })
 call s:h("slimClassChar",               { "fg": s:yellow })
 call s:h("slimRuby",                    { "fg": s:blue })
+call s:h("slimRubyChar",                { "fg": s:blue })
 call s:h("slimRubyOutputChar",          { "fg": s:blue })
+call s:h("slimText",                    { "fg": s:white })
 
 " i3
 call s:h("i3KeyModifier",               { "fg": s:yellow })
