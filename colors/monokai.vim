@@ -146,7 +146,7 @@ call s:h("Conceal",       { "fg": s:search,     "bg": s:black })
 
 " misc
 call s:h("SpecialKey",    { "fg": s:warning })
-call s:h("Title",         { "fg": s:constant })
+call s:h("Title",         { "fg": s:pink })
 call s:h("Directory",     { "fg": s:meta })
 
 " diff
@@ -181,11 +181,11 @@ call s:h("Float",         { "fg": s:search })
 call s:h("Identifier",    { "fg": s:constant })
 call s:h("Function",      { "fg": s:function })
 
-call s:h("Statement",     { "fg": s:brightblue })
+call s:h("Statement",     { "fg": s:brightwhite })
 call s:h("Conditional",   { "fg": s:structure })
 call s:h("Repeat",        { "fg": s:structure })
 call s:h("Label",         { "fg": s:brightwhite })
-call s:h("Operator",      { "fg": s:structure })
+call s:h("Operator",      { "fg": s:brightwhite })
 call s:h("Keyword",       { "fg": s:structure })
 call s:h("Exception",     { "fg": s:structure })
 
@@ -244,11 +244,64 @@ call s:h("SpellBad",                { "format": "bold" })
 call s:h("ALEError",                { "format": "bold" })
 call s:h("ALEWarning",              {  })
 
+" CoC --------------------------------------------------------------------------
+call s:h("NormalFloat",             { "bg": s:brightblack })
+
+" CSS --------------------------------------------------------------------------
+call s:h("cssBraces",   { "fg": s:white })
+hi! link cssTagName htmlTagName
+
+hi! link cssAtKeyword               Include
+hi! link cssBorderProp              StorageClass
+hi! link cssBoxProp                 StorageClass
+hi! link cssColorProp               StorageClass
+hi! link cssComment                 StorageClass
+hi! link cssFlexibleBoxProp         StorageClass
+hi! link cssFontProp                StorageClass
+hi! link cssTextProp                StorageClass
+hi! link cssMediaProp               StorageClass
+hi! link cssBackgroundProp          StorageClass
+hi! link cssTransformProp           StorageClass
+hi! link cssTransitionProp          StorageClass
+hi! link cssUIProp                  StorageClass
+hi! link cssPositioningProp         StorageClass
+hi! link cssPageProp                StorageClass
+hi! link cssPseudoClassId           Function
+hi! link cssInteractProp            StorageClass
+hi! link cssStyle                   Include
+
+hi! link cssClassName               Normal
+hi! link cssClassNameDot            Normal
+hi! link cssIdName                  String
+hi! link cssIdNameDot               Normal
+hi! link cssIdentifier              String
+
 " GitGutter --------------------------------------------------------------------
 call s:h("GitGutterAdd",            { "fg": s:green })
 call s:h("GitGutterChange",         { "fg": s:yellow })
 call s:h("GitGutterDelete",         { "fg": s:red })
 call s:h("GitGutterChangeDelete",   { "fg": s:red })
+
+" HTML -------------------------------------------------------------------------
+" hi! link htmlTag Comment
+call s:h("htmlEndTag",   { "fg": s:white })
+call s:h("htmlTag",   { "fg": s:white })
+" call s:h("htmlArg",   { "fg": s:yellow })
+" call s:h("htmlTagName",   { "fg": s:brightwhite })
+hi! link htmlTagName Keyword
+hi! link htmlSpecialTagName Error
+hi! link htmlArg Statement
+hi! link htmlH1 Title
+hi! link htmlH2 Title
+hi! link htmlH3 Title
+hi! link htmlH4 Title
+hi! link htmlH5 Title
+hi! link htmlH6 Title
+hi! link htmlH7 Title
+call s:h("htmlH4",   { "fg": s:red })
+
+" JS ---------------------------------------------------------------------------
+hi! link JSModuleKeyword Keyword
 
 " vim-signify
 call s:h("SignifySignAdd",          { "fg": s:green })
@@ -257,6 +310,9 @@ call s:h("SignifySignDelete",       { "fg": s:red })
 call s:h("SignifySignChangeDelete", { "fg": s:red })
 call s:h("SignifySignDeleteFirstLine", { "fg": s:red })
 
+" vim-svelte
+hi! link svelteSurroundingTag htmlTag
+
 " EasyMotion
 call s:h("EasyMotionTarget",        { "fg": s:green })
 call s:h("EasyMotionTarget2First",  { "fg": s:green })
@@ -264,6 +320,13 @@ call s:h("EasyMotionTarget2Second", { "fg": s:green })
 call s:h("EasyMotionShade",         { "fg": s:white })
 hi link EasyMotionMoveHL Search
 hi link EasyMotionIncSearch Search
+
+" SASS -------------------------------------------------------------------------
+hi! link sassClass String
+hi! link sassClassChar Normal
+hi! link sassId String
+hi! link sassIdChar Normal
+
 
 
 
