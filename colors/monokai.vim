@@ -332,6 +332,12 @@ hi! link sassIdChar Normal
 
 " Languages --------------------------------------------------------------------
 
+" Ruby -------------------------------------------------------------------------
+hi! link rubyBlockParameterList Function
+hi! link rubyMethodBlock Statement
+hi! link rubyControl Keyword
+
+
 
 " TypeScript -------------------------------------------------------------------
 hi! link typescriptEnumKeyword Statement
